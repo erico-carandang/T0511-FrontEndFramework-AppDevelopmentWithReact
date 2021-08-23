@@ -5,8 +5,7 @@ export class Counters extends Component {
     render() {
         return (
             <div>
-                <div className="row">
-                    <div className="col-md-1">
+                <div className="d-flex">
                         <button
                             className="btn btn-success m-2"
                             onClick={this.props.onReset}
@@ -14,8 +13,6 @@ export class Counters extends Component {
                         >
                             <i className="fa fa-refresh" aria-hidden="true" />
                         </button>
-                    </div>
-                    <div className="col-md-1">             
                         <button
                             className="btn btn-primary m-2"
                             onClick={this.props.onRestart}
@@ -23,7 +20,6 @@ export class Counters extends Component {
                         >
                             <i className="fa fa-refresh" aria-hidden="true" />
                         </button>
-                    </div>
                 </div>    
                 {this.props.counters.map(counter => (
                     <Counter
